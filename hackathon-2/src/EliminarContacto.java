@@ -1,17 +1,13 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class EliminarContacto {
-    public static boolean eliminarContacto(ArrayList<Contacto> agenda, String nombre) {
+    public static boolean eliminarContacto(HashMap<String, Contacto> agenda, String nombre) {
         if (nombre == null || nombre.isEmpty()) return false;
-        for (int i = 0; i < agenda.size(); i++){
-            if (agenda.get(i).getNombre().equalsIgnoreCase(nombre)){
-                agenda.remove(i);
-                return true;
-            }
-        }
-        return false;
+        if (!agenda.containsKey(nombre)) return false;
+        agenda.remove(nombre);
+        return true;
     }
-    void main() {
-
+    void main(){
     }
 }
