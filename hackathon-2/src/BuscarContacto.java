@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public static Contacto buscarContacto(ArrayList<Contacto> agenda, String nombreBusqueda) {
     for (Contacto contacto : agenda) {
 
@@ -6,4 +8,7 @@ public static Contacto buscarContacto(ArrayList<Contacto> agenda, String nombreB
         }
     }
     return null;
+}
+
+void main() {
 }
